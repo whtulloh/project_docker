@@ -1,0 +1,12 @@
+version: "3.8"
+services: 
+  prod:
+    build:
+      context: .
+      target: production
+    image: project_prod
+    container_name: project
+    volumes: 
+      - ./:/opt/project
+    ports:
+      - '80:80'

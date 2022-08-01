@@ -1,0 +1,29 @@
+# /etc/init.d/postgresql restart
+# /etc/init.d/apache2 start
+# ./opt/project/sync_projectdb.sh
+
+# docker build -t project .
+# docker run -d -p 80:80 project
+#
+
+========
+Docker
+========
+Reference https://docs.docker.com/reference/
+
+----- PRODUCTION ENVIRONTMENT -----
+1. Build image & Run docker Container
+docker-compose up --build
+
+2. Run Container from Image
+docker-compose up --no-build
+
+----- DEVELOPMENT ENVIRONTMENT -----
+1. Build Image docker (Container still not run)
+docker-compose -f docker-compose.dev.yml up --build
+
+2. Run Container from Image
+docker-compose -f docker-compose.dev.yml up --no-build
+
+3. Use Visual studio to remote debug
+Goto "RUN" menu >> "START DEBUGGING" | or press "F5"
